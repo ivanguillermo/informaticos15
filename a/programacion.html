@@ -31,7 +31,7 @@
     <meta name="keywords" content="matematica, informatica, educacion, blog, programacion, sistemas, investigacion">
     <meta name="author" content="Ivan Lopez Pedreanez">  
 
-    <title>Biblioteca</title>
+    <title>Programacion{ }</title>
   </head>
 
   <body>
@@ -262,147 +262,191 @@
           </div>
       </div>
       <!--------------------------------------------Main------------------------------------------------>
-      <div class="item main">   
+      <div class="item main">  
+
         <style>
-          .biblos{}
-          .biblos tr{height:600}
-          .biblos tr td{width:30%;text-alignt:center;}
-          .biblos tr th{background-color:#e7e7e7}
-          ul{text-align:left;list-style:none}
-          .biblos tr td ul li a{color:rgba(50,50,200,0.8);}
-        </style>   	  
-        <table class="biblos">
-          <tr>   <th>Semestre I</th>   <th>Semestre II</th>   <th>Semestre III</th>   </tr>
+          /* Slideshow container */
+          .slideshow-container_prog { max-width:90%; position: relative; left:-20px;  margin: auto; }
+          .mySlides_prog { display: none;}
+          /* Next & previous buttons */
+          .prev_prog, .next_prog
+            { 
+              cursor: pointer; 
+              position: absolute; 
+              top: 50%; 
+              width: auto;  
+              margin-top: -22px;  
+              padding: 16px;  
+              color: black;  
+              font-weight: bold;  
+              font-size: 18px; 
+              transition: 0.6s ease; 
+              border-radius: 0 3px 3px 0;
+            }
 
-          <tr>
-          <td>
-          <ul>
-          <li><a href="">Lengua Española</a></li>
-          <li><a href="">Introducción a la Filosofía</a></li>
-          <li><a href="">Psicología Evolutiva</a></li>
-          <li><a href="">Sociología</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/intro-calculo.html">Introducción al Cálculo</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/intro-algebra.html">Introducción al Álgebra</a></li>
-          </ul>
-          </td>
+          /* Position the "next button" to the right */
+          .next_prog {right: -40px; border-radius: 3px 0 0 3px; }
 
-          <td>
-          <ul>
-          <li><a href="https://www.blogger.com/blogger.g?blogID=30601542898142782">Psicología Educativa</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/intro-algebra-lineal.html">Introducción al Álgebra Lineal</a></li>
-          <li><a href="http://informaticos15.blogspot.com/p/blog-page_27.html">Introducción a la Informática</a></li>
-          <li><a href="">Desarrollo de los Procesos Cognoscitivos</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/intro-investigacion.html">Introducción a la Investigación</a></li>
-          </ul>
-          </td>
+          /* Position the "prev button" to the right */
+          .prev_prog {left: 0px; border-radius: 3px 0 0 3px; }
 
-          <td>
-          <ul>
-          <li><a href="">Filosofía Educativa</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/estructura-de-datos-y-programacion-i.html">Estructuras de Datos y Programación I</a></li>
-          <li><a href="">Venezuela Contemporánea</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/calculo-integral-y-diferencial.html">Cálculo Diferencial e <br/>Integral</a></li>
-          </ul>
-          </td>
-          </tr>
+          /* On hover, add a black background color with a little bit see-through */
+          .prev_prog:hover, .next_prog:hover {  background-color: rgba(0,0,0,0.8); }
 
-          <tr>
-          <th>Semestre IV</th>
-          <th>Semestre V</th>
-          <th>Semestre VI</th>
-          </tr>
-          <tr>
-          <td>
-          <ul>
-          <li><a href="">Currículo</a></li>
-          <li><a href="">Educación Ambiental</a></li>
-          <li><a href="">Fase de Observación</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/matematica-discreta.html">Matemática Discreta</a></li>
-          <li><a href="">Optativa Rescate de la <br/>Cultura</a></li>
-          </ul></td>
+          /* Caption text */
+          .text_prog {color: #f2f2f2;   font-size: 15px;   padding: 8px 12px;   position: absolute;   bottom: 8px;   width: 100%;   text-align: center; }
 
-          <td>
-          <ul>
-          <li><a href="">Optativa Integración</a></li>
-          <li><a href="">Optativa BioPsicoSocial</a></li>
-          <li><a href="">Planif. de los Aprendizajes</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/investigacion-educativa.html">Investigación Educativa</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/estructura-de-datos-y-programacion-ii.html">Estruct. de Datos y Program. II</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/electronica-digital.html">Electrónica Digital</a></li>
-          </ul></td>
+          /* Number text (1/3 etc) */
+          .numbertext_prog {  color: #f2f2f2;   font-size: 12px;   padding: 8px 12px; position: absolute; top: 0; }
 
-          <td>
-          <ul>
-          <li><a href="https://informaticos15.blogspot.com/p/sistemas-de-compu.html">Sistemas de Computación I</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/bases-de-datos.html">Bases de Datos</a></li>
-          <li><a href="">Estrategias y Recursos Instruccionales</a></li>
-          <li><a href="http://informaticos15.blogspot.com/p/eae.html">Estadísticas Aplicadas a la Educación</a></li>
-          <li><a href="https://drive.google.com/drive/folders/0B9lYrT0cFDNcNEpOUUN4QXBBVVE">Fase de Ejecución</a></li>
-          </ul></td>
-          </tr>
+          /* The dots/bullets/indicators */
+          .dot_prog {   cursor:pointer;   height: 13px;   width: 13px;   margin: 0 2px;   background-color: #bbb;   border-radius: 50%;   display: inline-block;   transition: background-color 0.6s ease; }
 
-          <tr>
-          <th>Semestre VII</th>
-          <th>Semestre VIII</th>
-          <th>Semestre IX</th>
-          </tr>
+          .active, .dot_prog:hover {   background-color: #717171; }
 
-          <tr>
-          <td>
-          <ul>
-          <li><a href="https://informaticos15.blogspot.com/p/sistemas-de-info.html">Sistemas de Información</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/redes-de-compu.html">Redes Informáticas</a></li>
-          <li><a href="">Evaluación de los Aprendizajes</a></li>
-          <li><a href="">Ética y Docencia</a></li>
-          <li><a href="https://drive.google.com/drive/folders/0B9lYrT0cFDNcNEpOUUN4QXBBVVE">Gerencia Educativa</a></li>
-          </ul></td>
+          /* Fading animation */
+          .fade_prog { 
+             -webkit-animation-name: fade_prog;
+             -webkit-animation-duration: 1.5s;
+             animation-name: fade_prog;
+             animation-duration: 1.5s;}
 
-          <td>
-          <ul>
-          <li><a href="">Optativa Metodológica</a></li>
-          <li><a href="">Actividad de Extensión</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/estructura-de-datos-y-programacion-iii.html">Estruct. de Datos y Program. III</a></li>
-          <li><a href="https://informaticos15.blogspot.com/p/didactica-informatica.html">Didáctica de la Informática</a></li>
-          <li><a href="https://drive.google.com/drive/folders/0B9lYrT0cFDNcNEpOUUN4QXBBVVE">Análisis y Diseño de SI</a></li>
-          </ul></td>
+          @-webkit-keyframes fade_prog {  from {opacity: .4}   to {opacity: 1} }
 
-          <td>
-          <ul>
-          <li><a href="">Optativa Profundización</a></li>
-          <li><a href="">Optativa Metodológica II</a></li>
-          <li><a href="">Fase de Ensayo</a></li>
-          <li><a href="">Administración de Centros de Información Educativa</a></li>
-          </ul></td>
-          </tr>
+          @keyframes fade_prog { from {opacity: .4} to {opacity: 1} }
+        </style>
 
-          <tr>
-          <th></th>
-          <th>Semestre X</th>
-          <th></th>
-          </tr>
-          <tr>
-          <td></td>
+        <center>
+         <div class="slideshow-container_prog">
+           
+            <div class="mySlides_prog fade_prog">
+                <div class="numbertext_prog"> </div>
+                <a href="http://informaticos15.blogspot.com/p/blog-page_27.html">
+                  <img src="https://goo.gl/8aLFfa" width="104%" height="450" />  <!-- Primera Imagen */-->
+                </a>
+                <div class="text_prog"></div>
+            </div>
 
-          <td>
-          <ul>
-          <li><a href="">Optativa Profundización II</a></li>
-          <li><a href="">Optativa Teórica</a></li>
-          <li><a href="">Fase Docencia Administración</a></li>
-          <li><a href="">Proyecto Educativo de Informática</a></li>
-          </ul>
-          </td>
+            <div class="mySlides_prog fade_prog">
+                <div class="numbertext_prog"> </div>
+                <a href="http://informaticos15.blogspot.com/p/estructura-de-datos-y-programacion-i.html">
+                  <img src="https://1.bp.blogspot.com/-dHl58fvnBFE/Wibi04f-fUI/AAAAAAAACos/8vyqb4p-mh41W1PtcbfVE2M5iX3Jq5xrgCLcBGAs/s16000/ED%2521.png" 
+                  width="104%" height="450" />  <!--/* Segunda Imagen */-->
+                </a>
+                <div class="text_prog"></div>
+            </div>
 
-          <td></td>
-          </tr>
-          </table>
-          </br></br></br>
-          <!--IMAGEN PENSUM EDUCACIÓN INFORMÁTICA-->
-          <h2>PLAN DE ESTUDIOS: EDUCACIÓN ESPECIALIDAD INFORMÁTICA </h2>
-          <h3>UPEL-IMPM</h3>
-          <a href="https://3.bp.blogspot.com/-757lUS5VguE/WRjo8DYwXbI/AAAAAAAABds/PvaRZkMy2-c38eWlw0Desmk2DPbgb-g8ACLcB/s1600/Arbol%2Bde%2BPrelaci%25C3%25B3n%2Bde%2BInform%25C3%25A1tica.jpg" imageanchor="1" >
-          <img alt="pensum-eduacaion-informatica-upel" title="pensum de educacion especialidad informatica upel"
-          width="100%" src="https://3.bp.blogspot.com/-757lUS5VguE/WRjo8DYwXbI/AAAAAAAABds/PvaRZkMy2-c38eWlw0Desmk2DPbgb-g8ACLcB/s1600/Arbol%2Bde%2BPrelaci%25C3%25B3n%2Bde%2BInform%25C3%25A1tica.jpg" />
-          </a>     
+            <div class="mySlides_prog fade_prog">
+                <div class="numbertext_prog"></div>
+                <a href="http://informaticos15.blogspot.com/p/estructura-de-datos-y-programacion-ii.html">
+                  <img src="https://4.bp.blogspot.com/-qAwE9W83M9c/WibvA1JPDpI/AAAAAAAACo8/F8sT0H7x788w78vPoPMaoTnn770Px34zgCLcBGAs/s1600/ED2_2.png" 
+                  width="104%" height="450" />  <!--/* Tercera Imagen */-->
+                </a>
+                <div class="text_prog"></div>
+            </div>
+
+            <div class="mySlides_prog fade_prog">
+                <div class="numbertext_prog"></div>
+                <a href="http://informaticos15.blogspot.com/p/bases-de-datos.html">
+                  <img src="https://4.bp.blogspot.com/-k6GACwt_Glk/WiS2A_BVYhI/AAAAAAAACoM/6-DU-xFWw2ouqRS3zJNByttVI-qhe00NwCLcBGAs/s1600/Bases%2Bde%2BDatos.png" width="104%" height="450" />  <!--/* Cuarta Imagen */-->
+                </a>
+                <div class="text_prog"></div>
+            </div>
+
+            <div class="mySlides_prog fade_prog">
+                <div class="numbertext_prog"></div>
+                <a href="http://informaticos15.blogspot.com/p/estructura-de-datos-y-programacion-iii.html">
+                  <img src="https://1.bp.blogspot.com/-LV_VgyWLhaQ/Wibv2AMcS-I/AAAAAAAACpI/ZOPOJRa9uv0gY1HHsGH8Ij0ZK2O5J__jgCLcBGAs/s1600/ED3.png" 
+                  width="104%" height="450" />  <!--/* Quinta Imagen */-->
+                </a>
+                <div class="text_prog"></div>
+            </div>
+
+            <a class="prev_prog" onclick="plusSlides_prog(-1)">&#10094;</a>
+            <a class="next_prog" onclick="plusSlides_prog(1)">&#10095;</a>
+          </div>
+        </center>
+
+        <center style="text-align:center">
+          <span class="dot_prog" onclick="currentSlide_prog(1)"></span>
+          <span class="dot_prog" onclick="currentSlide_prog(2)"></span>
+          <span class="dot_prog" onclick="currentSlide_prog(3)"></span>
+          <span class="dot_prog" onclick="currentSlide_prog(4)"></span>
+          <span class="dot_prog" onclick="currentSlide_prog(5)"></span>
+        </center> 
+
+        <script type="text/javascript">
+
+          var slide_prog_Index = 1;
+          showSlides_prog(slide_prog_Index);
+
+          function plusSlides_prog(n) { showSlides_prog(slide_prog_Index += n);}
+
+          function currentSlide_prog(n) { showSlides_prog(slide_prog_Index = n);}
+
+          function showSlides_prog(n)
+          {
+            var i;
+            var slides_prog = document.getElementsByClassName("mySlides_prog");
+            var dots_prog = document.getElementsByClassName("dot_prog");
+            if (n > slides_prog.length) {slide_prog_Index = 1}
+            if (n < 1) {slide_prog_Index = slides_prog.length}
+            for (i = 0; i < slides_prog.length; i++) { slides_prog[i].style.display = "none"; }
+            for (i = 0; i < dots_prog.length; i++) { dots_prog[i].className = dots_prog[i].className.replace(" active", ""); }
+            slides_prog[slide_prog_Index-1].style.display = "block";
+            dots_prog[slide_prog_Index-1].className += " active";
+          }
+        </script>
+
+          <br><br/>
+        <div style="font-size:15px;text-align:justify;text-indent:5px;">
+          <kbd>
+            <a href="http://informaticos15.blogspot.com/p/blog-page_27.html">
+              <h3>Introducción a la Informática</h3>
+            </a>
+            <hr/>
+              <p>El Instituto de Mejoramiento Profesional del Magisterio ofrece a los estudiantes de la Especialidad de Informática en su componente de Formación Especializada el curso denominado Introducción a la Informática con el propósito de iniciarlos en los elementos básicos del computador y en el desarrollo de las estructuras que permiten resolver problemas con el uso de esta herramienta, en su ámbito profesional y su aplicación e integración en el contexto educativo donde se desarrolla como estudiante de la especialidad dentro de la universidad.</p>
+              <br/><br/><br/>
+           <a href="http://informaticos15.blogspot.com/p/estructura-de-datos-y-programacion-i.html">
+             <h3>Estructura de Datos y Programación I</h3>
+           </a>
+            <hr/>
+            <p>El curso de Estructura de Datos y Programación I surge del análisis de las competencias que deberá demostrar el futuro docente en la Especialidad de Informática al cual se le proporcionará información exacta y profunda sobre el manejo de Estructuras de Datos, desarrollo de Algoritmos y el uso de Técnicas de Programación, presentándole situaciones que le permitan valorar la importancia de los conceptos y principios básicos de programación y su aplicabilidad en el área de informática.</p>
+              <br/><br/><br/>
+           <a href="http://informaticos15.blogspot.com/p/estructura-de-datos-y-programacion-ii.html">
+            <h3>Estructura de Datos y Programación II</h3>
+           </a>
+            <hr/>
+            <p>Este curso proporciona al futuro docente la profundización en los conceptos e implementación de las estructuras de datos complejas en un lenguaje de programación de alto nivel esto incluye conocimientos teóricos y prácticos, habilidades, experiencias y sentido crítico que permitan abordar el desarrollo de programas en forma correcta y eficiente para resolver problemas que se presentan en diversas áreas, para esto se estudiarán aspectos como son las operaciones básicas con arreglos, matrices, listas y árboles de datos. Por otra parte se profundiza en el aprendizaje de la matemática y álgebra lineal para la comprobación de los teoremas matriciales usando programación modular y estructura de datos avanzadas.</p>
+            <br/><br/><br/>
+           <a href="http://informaticos15.blogspot.com/p/bases-de-datos.html">
+            <h3>Bases de Datos</h3>
+           </a>
+           <hr/>
+            <p>El curso de Bases de Datos surge del análisis de las competencias que deberá demostrar el futuro docente en la Especialidad de Informática al cual se le facilitará conocimientos relacionados con los sistemas de Gestión de Base de datos y Sistemas de Información, además se conocerá el Modelo de Entidad/Relación, modelo relacional, características de una base de datos relacional y el procedimiento de normalización  de una Bases de Datos</p>
+            <br/><br/><br/>
+           <a href="http://informaticos15.blogspot.com/p/estructura-de-datos-y-programacion-iii.html">
+            <h3>Estructura de Datos y Programación III</h3>
+           </a>
+           <hr/>
+            <p>La utilización de lenguajes de programación orientados a objetos y eventos, representa una gran herramienta para los futuros docentes, promotores de la innovación de estrategias de enseñanza – aprendizaje; ya que a través de éste lenguaje podrán diseñar nuevos entornos educativos digitales que potencien el aprendizaje de los estudiantes, además de diseñar aplicaciones informáticas que contribuyan con el trabajo administrativo de los docentes, como son: programas de evaluación, planificación, repositorios de conocimiento, etc.</p>
+
+
+          <h2> OPTATIVAS </h2>
+           <a href="http://informaticos15.blogspot.com/p/internet-y-html.html">
+            <h3>Internet y HTML</h3>
+           </a>
+            <hr/>
+            <p>Internet se ha convertido en poco tiempo en la herramienta tecnológica más revolucionaria y poderosa de todas, influyendo en prácticamente todos los niveles de la actividad humana, permitiendo el acceso global a la información, entretenimiento, conocimiento, aprendizaje y recursos digitales de todo tipo, democratizando la información, reduciendo costos y agilizando las comunicaciones, desarrollando el potencial de investigación en el ámbito educativo y campos laborales muy diversos. Ha transformado el estilo de vida de millones de personas en todo el mundo.</p>
+            <br/><br/><br/>
+           <a href="https://informaticos15.blogspot.com/p/lenguajes-de-programacion-web.html">
+            <h3>Lenguajes de Programación WEB I</h3>
+           </a>
+           <hr/>
+            <p>Durante la evolución de los lenguajes de programación, se fueron desfasando los diseños gráficos tradicionales, se observa que han pasado de ser estáticos a lo que actualmente se conoce como lenguajes de programación para la web dinámicos. Sin confundir el término dinámico como la interacción del sistema con el usuario, sino como la interacción del usuario con datos a través del sistema.</p> 
+            <br/><br/>
+          <kbd>
+        </div>    	       
   	  </div>
       <!--------------------------------------------Footer------------------------------------------------>
   	  <div class="item foot flex-centrado">
