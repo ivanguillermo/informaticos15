@@ -16,6 +16,8 @@
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script> 
 
+    <script async="async" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <link href="/manifest.json" rel="manifest"/>
     <meta name="msapplication-TileColor" content="#6248cc">
     <meta name="msapplication-TileImage" content="img/i15.ico">
@@ -32,6 +34,38 @@
     <meta name="author" content="Ivan Lopez Pedreanez">  
 
     <title>Informaticos 15</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script> 
+		$(document).ready(function(){
+
+		    $("#prog_lang_tag").click(function(){ 
+		    	$(".tag").slideUp(); 
+		    	$("#prog_lang_list").slideDown(); });
+
+			$("#matematica_tag").click(function(){ 
+		    	$(".tag").slideUp();		    	 
+		    	$("#matematica_list").slideDown(); });
+
+		    $("#definiciones_tag").click(function(){ 
+		    	$(".tag").slideUp(); 
+		    	$("#definiciones_list").slideDown(); });
+
+		    $("#tutoriales_tag").click(function(){ 
+		    	$(".tag").slideUp(); 
+		    	$("#tutoriales_list").slideDown(); });
+
+		    $("#educacion_tag").click(function(){ 
+		    	$(".tag").slideUp();
+	    		$("#educacion_list").slideDown();});
+
+	    	$("#internet_tag").click(function(){ 
+		    	$(".tag").slideUp();
+	    		$("#internet_list").slideDown();});		           
+		                             });
+	</script>
   </head>
 
   <body>
@@ -142,7 +176,7 @@
 
 
 
-          <li class='li45'> <a href='a/workshops.html' class='nav_links'><i class="fa fa-connectdevelop"></i> Workshops</a>
+          <li class='li45'> <a href='a/workshops.html' class='nav_links'><i class="fa fa-connectdevelop" ></i> Workshops</a>
             <ul>
               <div class='workshops_menu' >
                 <div class='primera'>
@@ -256,8 +290,144 @@
               </ul>
           </div>
 
+          <div class='etiquetas'>
+          	<div class="etiqueta">
+
+          		<div id='educacion_tag'>Estudio</div>   
+          		<ul class='tag' id='educacion_list'>
+          			<a href="" class="tagli">
+          				<li>Mejora tu comprension lectora</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Por que es tan lento el internet en venezuela</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>3 Dimensiones para mejorar tu estudio</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Delitos Informaticos</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li></li>
+          			</a>
+          		</ul>
+          	</div>
+          	<div class="etiqueta">
+          		<div id='matematica_tag'>Matematica</div>
+          		<ul class='tag' id='matematica_list'>
+          			<a href="" class="tagli">
+          				<li>Evolucion historica del concepto de limite</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Nacimiento de geometria Analitica</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Limites </li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Geometria Analitica</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li></li>
+          			</a>
+          		</ul>
+          	</div>
+          	<div class="etiqueta">
+          		<div id='definiciones_tag'>Definiciones</div>
+          		<ul class='tag' id='definiciones_list'>
+          			<a href="" class="tagli">
+          				<li>TICS en Educacion</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Que es una red Informatica</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Paginas web y Software Educativo</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Videoconferencia</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Historia de Internet en Memes</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Ethernet</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Topologia en Redes</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Clasificacion de Redes/li>
+          			</a>
+          		</ul>
+          	</div>
+          	<div class="etiqueta">
+          		<div id='tutoriales_tag'> Tutoriales</div>
+          		<ul class='tag' id='tutoriales_list'>
+          			<a href="" class="tagli">
+          				<li>Como hacer una pagina Web</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Conectar 2 computadoras con Linux</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Consola Linux</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Instalar LAMP</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Instalar Wordpress</li>
+          			</a>
+          		</ul>
+          	</div>
+          	<div class="etiqueta">
+          		<div id='prog_lang_tag'>Lenguajes de programacion</div>
+          		<ul class='tag' id='prog_lang_list'>
+          			<a href="" class="tagli">
+          				<li>Aprende CSS</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>PHP: Caja Registradora</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Intro to SASS</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Angular 5</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Intro to Node.JS</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>Fundamentos de JQuery</li>
+          			</a>
+          		</ul>
+          	</div>
+          	<div class="etiqueta">
+          		<div id='internet_tag'>Internet</div>
+          		<ul class='tag' id='internet_list'>
+          			<a href="" class="tagli">
+          				<li>FTP</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>DNS</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>TPC</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li>IP: Protocolo de Internet</li>
+          			</a>
+          			<a href="" class="tagli">
+          				<li></li>
+          			</a>
+          		</ul>
+          	</div>
+         </div>
+
           <div class="item twitter"   async='async'>
-          <a class="twitter-timeline" data-lang="es" data-width="150%" data-height="100%" data-dnt="true" data-link-color="#3499fe" href="https://twitter.com/gatuso413?ref_src=twsrc%5Etfw"></a> 
+          <a class="twitter-timeline" data-lang="es" data-width="150%" data-height="100%" data-dnt="true" data-link-color="#3499fe" href="https://twitter.com/ivanguillermolp?ref_src=twsrc%5Etfw"></a> 
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
           </div>
       </div>
@@ -379,6 +549,8 @@
           <!--------------------------------------------React Workshops-------------------------------------->
   	    <div class="item workshops flex-centrado" id='talleres'>          
   	    </div>
+  	    
+
           <!--------------------------------------------PPTXS------------------------------------------------>
   	    <div class="item pptxs">  
   	      <div class="pptx item1 flex-centrado" id='pptx_img0'/>
@@ -509,7 +681,7 @@
        </center> 
        <br/>  
        </div>   
-  	   <p>por <a href="ivanlopezpedreanez.net.ve">Ivan Guillermo Lopez Pedreañez</a></p>     
+  	   <p>por <a href="https://ivanguillermo.github.io">Ivan Guillermo Lopez Pedreañez</a></p>     
        </div>
       </div>
     </div>
@@ -530,6 +702,8 @@
       html{font-family: 'Roboto'; font-weight: 500}
       body{overflow-x:hidden;}
       ul {list-style:none;}
+
+      p a:link{text-decoration: none}
 
       .flex-centrado{ display:flex;  justify-content: center; align-items: center; align-content: center; }
       
@@ -692,11 +866,12 @@
             width:200px;
             transition: all 1s;         
             display:grid;
-            grid-template-rows: 4fr 1fr auto 8fr;
+            grid-template-rows: 4fr 1fr auto auto 4fr;
             grid-template-areas:
                 "logos"
                 "buscar"
                 "menuv"
+                "etiquetas"
                 "twitter"
           }
 
@@ -739,6 +914,19 @@
           .menuv ul li ul li a {width: 130px; background-color: white; color: #000; left: -42px; font-size:12px;text-align: left; }
           .menuv ul li ul li a:hover {position: relative; background-color: #6E6E6E; color: #000; }
           .fa-caret-right {color: white;}
+
+          .etiquetas{
+          	grid-area: etiquetas;
+          	font-size: 12px;
+          	padding-left: ;
+          	padding-top:1.5vh;
+          }
+          .etiqueta div {padding-left: 6%; padding-top:4px; background: var(--rojo);margin:0;z-index: 12px;height:3.5vh;font-weight: 400; color:white;border-bottom:3.5px double #111a;}
+
+          .etiqueta div:before{content:'>'; border-radius:2.5px 2.5px; border:2px solid white;width: 5px; height: 3px; margin-right: 2px}
+
+          .etiqueta ul{display:none;}
+          #internet_list{display:block;}
 
           .twitter{
             grid-area: twitter;
@@ -941,9 +1129,22 @@
                   justify-content: center;
                   align-items: center;
                   }
+
        .post_descr p{
               padding:0% 10%;
-              font-size: 145%;
+              font-size: 135%;
+              line-height: 120%;
+              padding-top:2px;
+            }
+        #preview1{
+        	display: flex;
+        	justify-content: center;
+        	flex-direction: column;
+            height:35vh;
+            width:42vw;
+           	white-space: wrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             }
 
        .post:hover > .post_descr{visibility:visible;opacity:0.8}
@@ -959,7 +1160,13 @@
         
         .prenext{height:380px;width:70px;display:flex; justify-content: center; align-items: center; align-content: center; z-index:1;position:absolute;top:320px;font-weight: 800; color:var(--morado); font-size: 40px;text-shadow: 2px 2px solid black;transition: all 1s;;}
 
-        .minitxt{ background-color: white;}
+        .minitxt{ 
+        	background-color: white;
+        	white-space: wrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom:12px;
+        }
         .miniimg{ background-color: transparent; color:white;}
         .miniimg{display: none}
         .post:hover > .minitxt {background-color: transparent; font-size: 105%; text-shadow:1px 1px white; text-align: center} 
@@ -1062,7 +1269,8 @@
           margin:0px;
           height:100%;font-size: 58px; background:white; top:155px;position:relative; left:-150px;transform-origin:; 
           transform: rotate(-90deg); -webkit-transform:rotate(-90deg); -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg);
-          -o-transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3))
+          -o-transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3));
+		  background: transparent;
         }
         #Talleres{
         }
@@ -1128,7 +1336,7 @@
               font-size: 18px;
 
             }
-          .pptx a:link {text-decoration: none;} 
+          a:link {text-decoration: none;} 
           .pptxs div a:hover > .pptx_descr{visibility:visible; opacity:1}
 
                      
@@ -1453,7 +1661,7 @@
           <li className='partes'> 
             <i className="fa fa-arrow-circle-right"></i>  
             <b>{props.p}</b>
-            <a className='tlinks' target='_blank' href='https://www.google.com'>(ver)</a>
+          
           </li> )
         };     
 
@@ -1566,4 +1774,5 @@
           pptxs_change();  
           setInterval(pptxs_change, 10000)
     </script>
+    
 </html>
