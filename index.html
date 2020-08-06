@@ -685,6 +685,16 @@
        </div>
       </div>
     </div>
+
+    <nav class='navtwo'>
+    	<ul>
+			<li class="nav2_li">a</li>
+			<li class="nav2_li">b</li>
+			<li class="nav2_li">c</li>
+			<li class="nav2_li">d</li>
+			<li class="nav2_li">e</li>
+		</ul>
+    </nav>
   </body>
       <!--------------------------------------------Page Distribution style------------------------------------------------>
     <style>
@@ -1267,7 +1277,11 @@
           text-align: center;
           padding:0 25px;
           margin:0px;
-          height:100%;font-size: 58px; background:white; top:155px;position:relative; left:-150px;transform-origin:; 
+          height:100%;font-size: 58px; 
+          background:white; top:155px;
+          position:relative; 
+          left:-150px;
+          transform-origin:; 
           transform: rotate(-90deg); -webkit-transform:rotate(-90deg); -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg);
           -o-transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3));
 		  background: transparent;
@@ -1340,7 +1354,7 @@
           .pptxs div a:hover > .pptx_descr{visibility:visible; opacity:1}
 
                      
-          .item1{grid-area: pa; backgroundurl("img/pptx/administracion_bases_datos.png");}
+          .item1{grid-area: pa; background-image:url("img/pptx/administracion_bases_datos.png");}
           .item2{grid-area: pb; background-image:url("img/pptx/algebra_lineal.png")}
           .item3{grid-area: pc; background-image:url("img/pptx/datos_no_agrupados.png")}
           .item4{grid-area: pd; background-image:url("img/pptx/derivada.png")}
@@ -1439,6 +1453,7 @@
           .foot p a {color:var(--rosa);}
       
         .toptwo{display:none;}
+        .navtwo{display:none;}
     </style>
       <!--------------------------------------------Media Queries----------------------------------------------->
     <style>
@@ -1451,10 +1466,12 @@
               "navtwo" 
               "main"
             }        
-            .side,.side *,.head,.head *,.foot, .foot *,.navbar15 {display:none}        
+            .side,.side *,.head,.head *,.foot, .foot *,.navbar15 {display:none}  
+
             .workshop_tit{display:none;}
-            .talleres{width:;}
-            .item16 p {font-size: 13px;padding: 0% 10%} 
+            
+            .item16 p {font-size: 13px;padding: 0% 10%}
+
             .toptwo{display:flex; grid-area:toptwo;
              height: 200px; position: relative;
              background-image:url('informaticos15.png');background-repeat: no-repeat; background-size:100% 100%; background-position:center center;
@@ -1462,6 +1479,11 @@
                 animation-duration: 5s;
                 animation-iteration-count: infinite; 
             } 
+            .navtwo{
+            	display:flex;            	
+            	grid-area:navtwo;            	
+            }
+            .navtwo ul{display: flex;flex-flow: row wrap;}
            .prenext{display:none;} 
            #preview1{font-size: 11px}    
 
@@ -1488,11 +1510,10 @@
           
           .posts{
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 100px 40vh repeat(2, 15vh);
-            grid-template-areas:
-              "toptwo toptwo toptwo toptwo" 
-              "uno uno uno txt1"
-              "dos txt2 tres txt3"
+            grid-template-rows: auto repeat(2, 20vh);
+            grid-template-areas:              
+              "uno    uno    uno    txt1"
+              "dos    txt2   tres   txt3"
               "cuatro txt4 publicidad publicidad"
           }
 
@@ -1502,16 +1523,16 @@
           @media (max-width: 500px) { 
           .container {
             grid-template-columns: 1fr;
-            grid-template-rows:100px 50px 1vh ;
+            grid-template-rows:100px 50px auto ;
             grid-template-areas:
             "toptwo" 
-            "nav"
+            "navtwo"
             "main"
 
           }
-          .txt2, .txt3, .txt4, .publicidad, .toptwo {display:none;}
+          .txt2, .txt3, .txt4, .publicidad {display:none;}
           .posts{
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 50vw);
             font-size:8px;
             grid-template-rows: 2fr repeat(3, 1fr);
             grid-template-areas:
@@ -1529,19 +1550,18 @@
             display: grid;
             width:100%
             grid-gap:0px;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(8, 1fr) ;
+            grid-template-columns: repeat(4, 24vw);
+            grid-template-rows: 2fr repeat(4, 1fr) ;
             grid-template-areas:
-              " t  t  t  t   t  t"
-              " .  .  .  .  pd ph"
-              " .  .  .  pg pg ia"
-              " .  .  vb pg pg ia"
-              " .  vc pf ib va va"
-              " .  pe pe ib va va"
-              " ic pe pe pa pa pa"
-              " ic pc pb pa pa pa"              
+              " t  t   t  t"
+              
+              " pd pg pg ia"
+              " vb pg pg ia"
+              " pf ph va va"
+              " pe ib va va"                            
            }
-      
+
+          .item1, .item2, .item3, .item4, .item11, .item14, .item15{display:none}    
           
           .item16{font-size:12px;}
 
