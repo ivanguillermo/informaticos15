@@ -649,7 +649,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <header class="containerheader">
-                    <a href="#pptxs" class="closebtn">×</a>
+                    <a href='#pptxs' class="closebtn" onclick='closemodal'>×</a>
                     <h2 id='pptx_shower_tit'>Didactica</h2>
                   </header>
                   <div class="containercontainer">
@@ -659,7 +659,7 @@
                     </iframe>
                   </div>
                   <footer class="containerfooter">
-                    <p style='color:white'>by Ivan Guillermo Lopez</p>
+                    <p style='color:var(--rosa)'>by Ivan Guillermo Lopez</p>
                     <div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">                    
                     </div>
                   </footer>
@@ -1441,9 +1441,8 @@
 
               /* The modal's background */
               .modal { 
-                display:none;
-                
-                position: fixed;
+                display:none;                
+                position: absolute;
                 
               	align-items: center;
               	align-content: center;
@@ -1462,17 +1461,20 @@
               .modal:target {display: block;position: fixed;}
 
               /* The modal box */
-              .modal-dialog {display: ;
+              .modal-dialog {
+              	display: flex;
               	align-items: center;
               	align-content: center;
-              	justify-content: center;}
+              	justify-content: center;
+              	position: relative;
+              	top:50px;}
               /* The modal's content */
               .modal-dialog .modal-content {
                 background-color: var(--modalcolor);            
                 border: 1px #777 solid;
                 text-align: justify;
                 width: 72vw;
-                height: 90vh;
+                
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 border-radius: 12px 12px;
 
@@ -1616,6 +1618,7 @@
 	          }
 	          #img1{display: none}
 
+	          header, footer {font-size: 20px;}
           @media (max-width: 700px) {       
           .main{
             grid-template-columns: auto;
@@ -1633,8 +1636,7 @@
 
           .nav2_li2{font-size: 11px;}
 
-          #preview1{
-        	
+          #preview1{        	
             height:48vh;
             width:70vw;
             }
@@ -1666,6 +1668,13 @@
               " pf ph va "                                          
            }
            .pptx{width: 32vw; margin:0;height:22vw;}
+
+           .modal-dialog{margin-top: 30vh;}
+           .modal-content{height: 40vh}
+           .modal-dialog, .containercontainer, #pptx_shower_frame{height: 35vw;}
+           #percent-loaded{display:none;}
+
+
 
           .item1, .item2, .item3, .item4, .item11, .item15{display:none} 
          }
@@ -1925,16 +1934,26 @@
                                                            
                 }                    
                        
-          };                  
+          };     
+
+            var closebtn = document.querySelector('.closebtn');
+			var modald = document.getElementById('id01');
+
+			function closemodal(){
+				modald.style.display='none';
+			}
+
+			closebtn.addEventListener('click', closemodal)             
           
             function show(){
               var j = this.dataset.pptx;           
               var k = pptxs[j][2];
               var l = pptxs[j][1];
               shower.src = k ;
-              shower_tit.innerHTML = l;
-              
+              shower_tit.innerHTML = l;  
+              modald.style.display='';            
             }
+
             yes.forEach( pptxy => pptxy.addEventListener('click', show));
             
           pptxs_change();  
