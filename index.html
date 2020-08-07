@@ -683,22 +683,65 @@
       </div>
     </div>
 
-    <nav class='navtwo'style='background-color: var(--azul);justify-content: space-around;padding:0px 20px 0px 0px'>
-    	<ul style="">
-			<li class="nav2_li"><img src='informaticos15.png' width="120px" style='border-radius: 4px'/></li>
+    <script type="text/javascript">
+    	var dots = document.getElementById('nav2_more')
+    	var nav3 = document.getElementById('nav2_more_ul')
+
+    	function navtwomore(){
+    		nav3.style.display='flex';
+    		nav3.style.width='60vw';
+    	}
+
+    	dots.addEventListener('mouseover', navtwomore)
+    </script>
+
+    <nav class='navtwo'>
+    	<ul style="width:84vw">
+			<li class="nav2_li"><img src='informaticos15.png' style='width: 22vw; border-radius: 4px'/></li>
 			<li class="nav2_li">Matematica</li>
 			<li class="nav2_li">Programacion</li>
 			<li class="nav2_li">Sistemas</li>
 			<li class="nav2_li">Heuristica</li>
-			<li> ...
-				<ul style='display:none'>
-					
-					<li class="nav2_li">Posts</li>
-					<li class="nav2_li">Workshops</li>
+			<li id='nav2_more' style='background-color: var(--rojo); font-size: 16px; width:8vw; '> ... 
+				<ul id='nav2_more_ul' style="
+					display: none;
+					position: absolute;
+					left:60vw;
+					width:40vw;
+					align-self: flex-start;
+					align-content:  flex-start;
+					justify-content: space-between;
+					padding: 0;
+					height:45vh;
+					margin:0;
+					background-color: #333; 
+					flex-flow: column wrap; 
+					z-index: 80;">					
+					<li class="nav2_li2">Posts</li>
+					<li class="nav2_li2">Workshops</li>
+					<li class="nav2_li2">Biblioteca</li>
+					<li class="nav2_li2">Contacto</li>
 				</ul>
 			</li>		
 		</ul>
+
+		
     </nav>
+
+    <style type="text/css">
+
+    </style>
+
+    <script type="text/javascript">
+    	var dots = document.getElementById('nav2_more')
+    	var nav3 = document.getElementById('nav2_more_ul')
+
+    	function navtwomore(){
+    		nav3.style.display='flex'
+    	}
+
+    	dots.addEventListener('mouseover', navtwomore)
+    </script>
   </body>
       <!--------------------------------------------Page Distribution style------------------------------------------------>
     <style>
@@ -1461,7 +1504,8 @@
     </style>
       <!--------------------------------------------Foot Style----------------------------------------------->
     <style>
-        .foot {grid-area: foot;
+        .foot {
+        grid-area: foot;
         width:100%;
         background: #232323;
         flex-flow: column wrap;
@@ -1484,20 +1528,27 @@
           .foot p a {color:var(--rosa);}
       
         .toptwo{display:none;}
-        .navtwo{display:none;}
+        .navtwo{
+    		background-color: var(--azul);
+    		display:none; 
+    		flex-flow: column wrap; 
+    		justify-content: space-between;
+    		padding:0px 0px 0px 0px
+    	}
+        
     </style>
       <!--------------------------------------------Media Queries----------------------------------------------->
     <style>
           @media (max-width: 1000px) { 
             .container{
               grid-template-columns:1fr ;
-              grid-template-rows: 200px 50px 1vh;
-               grid-template-areas:
+              grid-template-rows: 200px 70px 1vh;
+              grid-template-areas:
               "toptwo" 
               "navtwo" 
               "main"
             }        
-            .side,.side *,.head,.head *,.foot, .foot *,.navbar15 {display:none}  
+            .side,.side *,.head,.head *, .foot, .foot *,.navbar15 {display:none}  
 
             .workshop_tit{display:none;}
             
@@ -1512,7 +1563,8 @@
             } 
             .navtwo{
             	display:flex;            	
-            	grid-area:navtwo;            	
+            	grid-area:navtwo;  
+            	height: 70px;          	
             }
             .navtwo ul{
             	display: inline-flex;
@@ -1520,11 +1572,30 @@
             	justify-content: space-between;
             	align-content: center;
             	align-items: center; 
-            	font-size: 9px;
+            	font-size: 14px;
+            	font-weight: 500;
+            	color:white;
             	text-align: center;
             	width: 100vw;
-            	height: 100%;
+            	height: 70px;
             }
+
+
+    	.nav2_li2{
+    		display: flex;
+    		justify-content: center; 
+    		align-content: center; 
+    		align-items: center; 
+    		border-top:4px solid var(--azulM);
+    		width:100%;
+    		height:8vh;    		
+			color:white;
+			font-size: 16px;
+    		}
+
+    	#nav2_more_ul{display:; z-index: 80;}
+
+    	#nav2_more:hover > ul{display:flex}
 
            .prenext{display:none;} 
            #preview1{font-size: 11px} 
@@ -1542,31 +1613,42 @@
                   }
             .taller img {width:100px;}
             .item16 p {font-size: 12px;padding: 0% 9%}
-          }
-          #img1{display: none}
+	          }
+	          #img1{display: none}
 
           @media (max-width: 700px) {       
           .main{
-            grid-template-columns: 1fr;
-            grid-template-rows: 120vh 100vh auto;
+            grid-template-columns: auto;
+            grid-template-rows: 120vh 1fr auto;
           }
 
           .posts{
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: auto repeat(2, 20vh);
+            grid-template-columns: repeat(4, 24vw);
+            grid-template-rows: 50vh repeat(2, 20vh);
             grid-template-areas:              
               "uno    uno    uno    txt1"
               "dos    txt2   tres   txt3"
               "cuatro txt4 publicidad publicidad"
           }
 
+          .nav2_li2{font-size: 11px;}
+
           #preview1{
         	
-            height:28vh;
-            width:78vw;
+            height:48vh;
+            width:70vw;
             }
 
           .item16 p {font-size: 12px;padding: 0% 7%}
+
+          .talleres
+          {
+          	align-items: center;			
+			justify-content: center;			
+			margin: -25% -6% 5% 0%;			
+			display: flex;
+			position: relative;
+          }
 
           .but15_info{display: none}
 
@@ -1591,19 +1673,34 @@
           @media (max-width: 500px) { 
           .container {
             grid-template-columns: 1fr;
-            grid-template-rows:50px auto ;
+            grid-template-rows:70px auto 110px;
             grid-template-areas:
             "navtwo"
             "main"
+            "foot"
           }
-
+          .main{
+            grid-template-columns: auto;
+            grid-template-rows: 120vh auto auto;
+          }
+		  .foot, .foot *{display: flex}
           
           .toptwo{display: none}
+          .navtwo{height: 70px}
+
+          .talleres{
+          	align-items: center;			
+			justify-content: center;			
+			margin-top: 2vh ;	
+			display: inline-flex;
+			position: relative;
+          }
+
           .txt2, .txt3, .txt4, .publicidad {display:none;}
           .posts{
             grid-template-columns: repeat(2, 50vw);
             font-size:8px;
-            grid-template-rows: 1.5fr repeat(3, 1fr);
+            grid-template-rows: 50vh repeat(3, 1fr);
             grid-template-areas:
               "uno  uno "
               "txt1 txt1 "
@@ -1637,7 +1734,7 @@
     	function side(){
         x++;
         if(x%2 > 0){
-    		sideb.style.left='-220px';
+    	sideb.style.left='-220px';
         sideb.style.width='0px';
         prevvbut.style.left='0vw';
         nexttbut.style.left='61vw';    
