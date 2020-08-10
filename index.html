@@ -9,7 +9,7 @@
     <meta content='blog de informática, matematica, programación, microelectrónica, investigacion' name='description'/>
     <meta content='informatica, sistemas, programacion, lenguajes programacion, matematica,electronica digital,investigacion, educacion, upel' name='keywords'/>
 
-    <link async='async' href='https://fonts.googleapis.com/css?family=Barriecito|Roboto' rel='stylesheet'/>
+    <link async='async' href='https://fonts.googleapis.com/css?family=Barriecito|Cabin+Sketch|Roboto|Arimo' rel='stylesheet'/>
     <link async="async" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
@@ -31,44 +31,68 @@
     <meta class='swiftype' name='image' data-type='enum' content='img/i15.png' />
     <meta name="image" content="img/i15.png">
     <meta name="keywords" content="matematica, informatica, educacion, blog, programacion, sistemas, investigacion">
-    <meta name="author" content="Ivan Lopez Pedreanez">  
-
-    <title>Informaticos 15</title>
+    <meta name="author" content="Ivan Lopez Pedreanez">      
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Informaticos 15</title>
 
 
     <script> 
 		$(document).ready(function(){
 
 		    $("#prog_lang_tag").click(function(){ 
-		    	$(".tag").slideUp(); 
-		    	$("#prog_lang_list").slideDown(); });
+		    	$(".tag").slideUp();
+		    	$('.up').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');		    	  
+		    	$("#prog_lang_list").slideDown();
+		    	$("#prog_lang_tag > i").removeClass('fa-chevron-circle-up')
+		    						  .addClass('fa-chevron-circle-down');  });
 
 			$("#matematica_tag").click(function(){ 
-		    	$(".tag").slideUp();		    	 
-		    	$("#matematica_list").slideDown(); });
+		    	$(".tag").slideUp()
+		    	$('.up').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up'); 		    	 
+		    	$("#matematica_list").slideDown(); 
+		    	$("#matematica_tag > i").removeClass('fa-chevron-circle-up')
+		    						  .addClass('fa-chevron-circle-down');  });
 
 		    $("#definiciones_tag").click(function(){ 
-		    	$(".tag").slideUp(); 
-		    	$("#definiciones_list").slideDown(); });
+		    	$(".tag").slideUp()
+		    	$('.up').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');  
+		    	$("#definiciones_list").slideDown(); 
+		    	$("#definiciones_tag > i").removeClass('fa-chevron-circle-up')
+		    						  .addClass('fa-chevron-circle-down');  });
 
 		    $("#tutoriales_tag").click(function(){ 
-		    	$(".tag").slideUp(); 
-		    	$("#tutoriales_list").slideDown(); });
+		    	$(".tag").slideUp()
+		    	$('.up').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');   
+		    	$("#tutoriales_list").slideDown(); 
+		    	$("#tutoriales_tag > i").removeClass('fa-chevron-circle-up')
+		    						  .addClass('fa-chevron-circle-down');  });
 
 		    $("#educacion_tag").click(function(){ 
-		    	$(".tag").slideUp();
-	    		$("#educacion_list").slideDown();});
+		    	$(".tag").slideUp()
+		    	$('.up').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');   
+	    		$("#educacion_list").slideDown();
+		    	$("#educacion_tag > i").removeClass('fa-chevron-circle-up')
+		    						  .addClass('fa-chevron-circle-down');  });
 
 	    	$("#internet_tag").click(function(){ 
-		    	$(".tag").slideUp();
-	    		$("#internet_list").slideDown();});		           
+		    	$(".tag").slideUp()
+		    	$('.up').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up'); 
+	    		$("#internet_list").slideDown();
+		    	$("#internet_tag > i").removeClass('fa-chevron-circle-up')
+		    						  .addClass('fa-chevron-circle-down');  });		           
 		                             });
 	</script>
+
+	
   </head>
 
   <body>
+  	<style type="text/css">
+		.jquery{color:gold;background-color: gold; font-family: barriecito;}
+	</style>
+
     <div class="toptwo">    
     </div>
 
@@ -95,12 +119,17 @@
         <!--------------------------------------------NavBar---------------------------------------------->
       <div class="nav navbar15 flex-centrado" id='navbar15'>
 	        <ul class="nav45">  
-	          <li id='nav_home' class="flex-centrado">
-	            <a id='sider' class='flex-centrado'>
-	              <img alt="informaticos 15" src="img/i15_mini.png">
-	            </a>
-	            <kbd style="letter-spacing: 3px">/home</kbd>
-	          </li>
+	          <li  class="flex-centrado" style='position: relative; left:-60px; top:-15px; z-index: 20000000'>
+	          	<div style="display:flex; flex-direction: row; justify-content: center;">
+		          	<a id='sider' style='margin-right:3vw;margin-top: 5px; font-size: 32px;color:var(--rojo)'> <i class="fa fa-bars"></i> </a>
+	          		<div id='nav_home' style='position: relative; top:'>
+	            		<a  href="#" class='flex-centrado'>
+	              			<img alt="informaticos 15" src="img/i15_mini.png">
+	            		</a>
+	            		<kbd style="letter-spacing: 1.3px">/home</kbd>
+	            	</div>
+	          	</div>
+	          </li>	          
 
 	           <li id='nav_heuristica' class='li45'><a href='a/heuristica.html' class='nav_links'><i class="fa fa-search"></i> Heurística</a>
 	            <ul>
@@ -290,7 +319,7 @@
           <div class='etiquetas'>
 	          	<div class="etiqueta">
 
-	          		<div id='educacion_tag'>Estudio</div>   
+	          		<div id='educacion_tag'><i class="up fa fa-chevron-circle-up"></i>Estudio</div>   
 	          		<ul class='tag' id='educacion_list'>
 	          			<a href="" class="tagli">
 	          				<li>Mejora tu comprension lectora</li>
@@ -304,13 +333,10 @@
 	          			<a href="" class="tagli">
 	          				<li>Delitos Informaticos</li>
 	          			</a>
-	          			<a href="" class="tagli">
-	          				<li></li>
-	          			</a>
 	          		</ul>
 	          	</div>
 	          	<div class="etiqueta">
-	          		<div id='matematica_tag'>Matematica</div>
+	          		<div id='matematica_tag'><i class="up fa fa-chevron-circle-up"></i>Matematica</div>
 	          		<ul class='tag' id='matematica_list'>
 	          			<a href="" class="tagli">
 	          				<li>Evolucion historica del concepto de limite</li>
@@ -324,13 +350,10 @@
 	          			<a href="" class="tagli">
 	          				<li>Geometria Analitica</li>
 	          			</a>
-	          			<a href="" class="tagli">
-	          				<li></li>
-	          			</a>
 	          		</ul>
 	          	</div>
 	          	<div class="etiqueta">
-	          		<div id='definiciones_tag'>Definiciones</div>
+	          		<div id='definiciones_tag'><i class="up fa fa-chevron-circle-up"></i>Definiciones</div>
 	          		<ul class='tag' id='definiciones_list'>
 	          			<a href="" class="tagli">
 	          				<li>TICS en Educacion</li>
@@ -359,7 +382,7 @@
 	          		</ul>
 	          	</div>
 	          	<div class="etiqueta">
-	          		<div id='tutoriales_tag'> Tutoriales</div>
+	          		<div id='tutoriales_tag'><i class="up fa fa-chevron-circle-up"></i> Tutoriales</div>
 	          		<ul class='tag' id='tutoriales_list'>
 	          			<a href="" class="tagli">
 	          				<li>Como hacer una pagina Web</li>
@@ -379,7 +402,7 @@
 	          		</ul>
 	          	</div>
 	          	<div class="etiqueta">
-	          		<div id='prog_lang_tag'>Lenguajes de programacion</div>
+	          		<div id='prog_lang_tag'><i class="up fa fa-chevron-circle-up"></i>Lenguajes de programacion</div>
 	          		<ul class='tag' id='prog_lang_list'>
 	          			<a href="" class="tagli">
 	          				<li>Aprende CSS</li>
@@ -402,7 +425,7 @@
 	          		</ul>
 	          	</div>
 	          	<div class="etiqueta">
-	          		<div id='internet_tag'>Internet</div>
+	          		<div id='internet_tag'><i class="up fa fa-chevron-circle-down"></i>Internet</div>
 	          		<ul class='tag' id='internet_list'>
 	          			<a href="" class="tagli">
 	          				<li>FTP</li>
@@ -415,9 +438,6 @@
 	          			</a>
 	          			<a href="" class="tagli">
 	          				<li>IP: Protocolo de Internet</li>
-	          			</a>
-	          			<a href="" class="tagli">
-	          				<li></li>
 	          			</a>
 	          		</ul>
 	          	</div>
@@ -434,11 +454,17 @@
   	        <div class="post uno">
               <div class="post_descr">
                 <h4 id='prev0'> Internet</h4>
-                <p id='preview1'>
-		            CUANDO QUEREMOS CONECTARNOS A FACEBOOK, suponiendo que tenemos una computadora conectada a INTERNET, (ya sea por red cableada, satelital o wifi) existe un proceso de diferentes capas y pasos que deben realizarse <br/><br/>
-		            Facebook es un sitio web, el cual consiste de varias paginas web interconectadas. Cada pagina web es un documento escrito en un lenguaje de programación WEB llamado HTML.<br/><br/>
-		            Para poder visualizar la página web, se utiliza un navegador web, el cual es software que funciona como un interprete de los lenguajes de programación, y de esta manera permite visualizar la página como fue la intención del creador de la misma, e interactuar con ella
-                </p>
+                <center id='preview1' >
+                	<p>
+		            CUANDO QUEREMOS CONECTARNOS A FACEBOOK, suponiendo que tenemos una computadora conectada a INTERNET, (ya sea por red cableada, satelital o wifi) existe un proceso de diferentes capas y pasos que deben realizarse 
+		        	</p>
+		            <p>
+		            Facebook es un sitio web, el cual consiste de varias paginas web interconectadas. Cada pagina web es un documento escrito en un lenguaje de programación WEB llamado HTML.
+		        	</p>
+		            <p>
+		            Para poder visualizar la página web, se utiliza un navegador web, el cual es software que funciona como un interprete de los lenguajes de programación, y de esta manera permite visualizar la página como fue la intención del creador de la misma, e interactuar con ella.
+		        	</p>
+                </center>
                 <a id='prev_go' href=''>
                   <button type="button" class='but15'>
                   Ir al articulo
@@ -449,22 +475,28 @@
             </div>
   	    
             <div class="post dos">
-              <div class='miniimg flex-centrado'>
-                  <h4>Dev Ops</h4>
-                  <p>El término DevOps se refiere usualmente al movimiento profesional emergente que aboga por una relación colaborativa... </p>
-              </div>
+              	<a href="">
+	              	<div class='miniimg flex-centrado'>
+	                  <h4>Dev Ops</h4>
+	                  <p>El término DevOps se refiere usualmente al movimiento profesional emergente que aboga por una relación colaborativa... </p>
+	             	</div>
+              	</a>
             </div>
             <div class="post tres">
-              <div class='miniimg flex-centrado'>
-                  <h4>Evolucion del Concepto de Limite</h4>
-                  <p>Seguramente, estudiando matemática, alguna que otra vez te has encontrado con problemas para entender realmente... </p>
-              </div>
+            	<a href="">
+	              	<div class='miniimg flex-centrado'>
+	                  <h4>Evolucion del Concepto de Limite</h4>
+	                  <p>Seguramente, estudiando matemática, alguna que otra vez te has encontrado con problemas para entender realmente... </p>
+	              	</div>
+	            </a>
             </div>
             <div class="post cuatro">
-             <div class='miniimg flex-centrado'>
-                  <h4>jQuery</h4>
-                  <p>Las bases de la programación Web, cuanto a los Lenguajes de Programación son ... </p>
-              </div>
+            	<a href="">
+	            	<div class='miniimg flex-centrado'>
+	                  <h4>jQuery</h4>
+	                  <p>Las bases de la programación Web, cuanto a los Lenguajes de Programación son ... </p>
+	             	</div>
+            	</a>             	
             </div>
          
 
@@ -476,43 +508,54 @@
             </div>
          
             <div class="post txt2">
-  	        	<div class='minitxt flex-centrado'>
-  	            	<h4>Protocolo de Transferencia</h4>
-  	            	<p>Internet la entendemos como "un conjunto de redes informáticas internconectadas" la idea detrás de lograr... </p>
-  	          </div> 
+  	        	<a href="">
+  	        		<div class='minitxt flex-centrado'>
+	  	            	<h4>Protocolo de Transferencia</h4>
+	  	            	<p>Internet la entendemos como "un conjunto de redes informáticas internconectadas" la idea detrás de lograr... </p>
+  	          		</div> 
+  	          	</a>
             </div>
   	        <div class="post txt3">
-  	        	<div class='minitxt flex-centrado'>
-  		        	<h4>Por qué el intenet es tan lento en vzla</h4>
-              		<p>Para prácticamente cualquier usuario regular de internet en Venezuela no es un secreto que la conexión...</p>
-  	          </div>            	
+  	        	<a href="">
+	  	        	<div class='minitxt flex-centrado'>
+	  		        	<h4>Por qué el intenet es tan lento en vzla</h4>
+	              		<p>Para prácticamente cualquier usuario regular de internet en Venezuela no es un secreto que la conexión...</p>
+	  	          	</div>
+  	          	</a>            	
             </div>
   	        <div class="post txt4">
-  	        	<div class='minitxt flex-centrado'>
-  		        	<h4>Nacimiento de la Geometria Analítica</h4>
-  	            	<p>La geometría analítica es básicamente una ayuda de la geometría al álgebra y del álgebra a la geometría. La geometría confiere al álgebra...</p>
-  	          </div>
+  	        	<a href="">
+	  	        	<div class='minitxt flex-centrado'>
+	  		        	<h4>Nacimiento de la Geometria Analítica</h4>
+	  	            	<p>La geometría analítica es básicamente una ayuda de la geometría al álgebra y del álgebra a la geometría. La geometría confiere al álgebra...</p>
+	  	          	</div>
+	  	        </a>
             </div>
   	        <div class="post publicidad"></div>
       	</div>
           <!--------------------------------------------Post Scripts----------------------------------------->     
         <script type="text/javascript">
               const post_uno=[
-                ['Internet', 'internet.gif', `CUANDO QUEREMOS CONECTARNOS A FACEBOOK, suponiendo que tenemos una computadora conectada a INTERNET, (ya sea por red cableada, satelital o wifi) existe un proceso de diferentes capas y pasos que deben realizarse <br/><br/>
-                Facebook es un sitio web, el cual consiste de varias paginas web interconectadas. Cada pagina web es un documento escrito en un lenguaje de programación WEB llamado HTML.<br/><br/>
-                Para poder visualizar la página web, se utiliza un navegador web, el cual es software que funciona como un interprete de los lenguajes de programación, y de esta manera permite visualizar la página como fue la intención del creador de la misma, e interactuar con ella`],
-                ['TCP', 'TCP.png', `Internet la entendemos como "un conjunto de redes informáticas internconectadas", la idea detrás de lograr está interconexión, era principalmente que entre computadores de todo el mundo pudieran compartirse información. <br/><br/>
-                 Para poder lograr esto, la comunicación entre los diferentes computadores, cada uno posiblemente con diferentes fabricantes, arquitecturas, etc. se necesitaba desarrollar, tal y como para la comunicación entre diferentes personas, un lenguaje común por medio del cual los computadores pudieran ponerse de acuerdo sobre como se llevaría a cabo el proceso de...`],
-                ['FTP', 'FTP.png', `Este protocolo de red para transferencia de archivos entre sistemas conectados a una red TCP basada en la arquitectura Cliente-Servidor. Independientemente del sistema operativo que se utilice en dos equipos, estos pueden conectarse para compartir archivos de audio, video, imágenes, texto, aplicaciones, etc. Además de la posibilidad de transmitir archivos, también permite visualizar directorios, cambiar el nombre o limitar derechos`],
-                ['DNS', 'DNS.png', ` El Sistema de Nombres de Dominio (DNS) es la guía telefónica de Internet. Las personas acceden a la información online a través de nombres de dominio, como wikipedia.org o espn.com. Los navegadores web interactúan a través de direcciones de Protocolo de Internet (IP). El DNS traduce nombres de dominio a direcciones IP para que los navegadores puedan cargar recursos de Internet.<br/><br/>
-                  Cada dispositivo conectado a Internet tiene una dirección IP única que otras máquinas utilizan para encontrar el dispositivo. Los servidores DNS 
-                  eliminan la necesidad de que los humanos memoricen direcciones IP como 192.168.1.1 (en IPv4), o direcciones IP alfanuméricas más complejas más nuevas, 
-                  como... `],
-                ['IP','IP.png', `Es un protocolo de comunicación de datos digitales clasificado funcionalmente en la capa de red según el modelo internacional OSI.<br/>
-                Su función principal es el uso bidireccional en origen o destino de comunicación para transmitir datos mediante un protocolo no orientado a conexión que
-                transfiere paquetes conmutados a través de distintas redes físicas previamente enlazadas según la norma OSI de enlace de datos.<br/><br/>
-                El diseño del protocolo IP se realizó presuponiendo que la entrega de los paquetes de datos sería no confiable. Por ello, IP tratará de realizarla del
-                mejor modo posible...`]  
+                ['Internet', 'internet.gif', `<p>CUANDO QUEREMOS CONECTARNOS A FACEBOOK, suponiendo que tenemos una computadora conectada a INTERNET, (ya sea por red cableada, satelital o wifi) existe un proceso de diferentes capas y pasos que deben realizarse </p>
+                <p>Facebook es un sitio web, el cual consiste de varias paginas web interconectadas. Cada pagina web es un documento escrito en un lenguaje de programación WEB llamado HTML.</p>
+                <p>Para poder visualizar la página web, se utiliza un navegador web, el cual es software que funciona como un interprete de los lenguajes de programación, y de esta manera permite visualizar la página como fue la intención del creador de la misma, e interactuar con ella</p>`],
+
+
+                ['TCP', 'TCP.png', `<p>Internet la entendemos como "un conjunto de redes informáticas internconectadas", la idea detrás de lograr está interconexión, era principalmente que entre computadores de todo el mundo pudieran compartirse información. </p>
+                 	<p>Para poder lograr esto, la comunicación entre los diferentes computadores, cada uno posiblemente con diferentes fabricantes, arquitecturas, etc. se necesitaba desarrollar, tal y como para la comunicación entre diferentes personas, un lenguaje común por medio del cual los computadores pudieran ponerse de acuerdo sobre como se llevaría a cabo el proceso de...</p>`],
+
+
+                ['FTP', 'FTP.png', `<p>Este protocolo de red para transferencia de archivos entre sistemas conectados a una red TCP basada en la arquitectura Cliente-Servidor. Independientemente del sistema operativo que se utilice en dos equipos, estos pueden conectarse para compartir archivos de audio, video, imágenes, texto, aplicaciones, etc. Además de la posibilidad de transmitir archivos, también permite visualizar directorios, cambiar el nombre o limitar derechos</p>`],
+
+
+                ['DNS', 'DNS.png', ` <p>El Sistema de Nombres de Dominio (DNS) es la guía telefónica de Internet. Las personas acceden a la información online a través de nombres de dominio, como wikipedia.org o espn.com. Los navegadores web interactúan a través de direcciones de Protocolo de Internet (IP). El DNS traduce nombres de dominio a direcciones IP para que los navegadores puedan cargar recursos de Internet.</p>
+                  <p>Cada dispositivo conectado a Internet tiene una dirección IP única que otras máquinas utilizan para encontrar el dispositivo. Los servidores DNS eliminan la necesidad de que los humanos memoricen direcciones IP como 192.168.1.1 (en IPv4), o direcciones IP alfanuméricas más complejas más nuevas, como... </p>`],
+
+
+                ['IP','IP.png', `<p>Es un protocolo de comunicación de datos digitales clasificado funcionalmente en la capa de red según el modelo internacional OSI.</p>
+                <p>Su función principal es el uso bidireccional en origen o destino de comunicación para transmitir datos mediante un protocolo no orientado a conexión que transfiere paquetes conmutados a través de distintas redes físicas previamente enlazadas según la norma OSI de enlace de datos.</p>
+                <p> El diseño del protocolo IP se realizó presuponiendo que la entrega de los paquetes de datos sería no confiable. Por ello, IP tratará de realizarla del mejor modo posible...
+                </p>`]  
                ]
 
               var prevvbut = document.getElementById('prevvbut');
@@ -981,9 +1024,12 @@
           }
           .etiqueta div {padding-left: 6%; padding-top:4px; background: var(--rojo);margin:0;z-index: 12px;height:3.5vh;font-weight: 400; color:white;border-bottom:3.5px double #111a;}
 
-          .etiqueta div:before{content:'>'; border-radius:2.5px 2.5px; border:2px solid white;width: 5px; height: 3px; margin-right: 2px}
+          .etiqueta div:before{content:; border-radius:2.5px 2.5px; border:2px solid white;width: 5px; height: 3px; margin-right: 2px}
 
           .etiqueta ul{display:none;}
+          .fa-chevron-circle-up, .fa-chevron-circle-down{margin-right:2px;}
+
+          .tagli{list-style-image: url(img/i15.ico); font-family: Cabin Sketch;color:var(--azulM);}
           #internet_list{display:block;}
 
           .twitter{
@@ -1194,15 +1240,18 @@
               line-height: 120%;
               padding-top:2px;
             }
-        #preview1{
+        #preview1, #preview1 p, #preview1 *{
         	display: flex;
         	justify-content: center;
         	flex-direction: column;
             height:35vh;
             width:42vw;
+            font-size: 13px;
            	white-space: wrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            text-align: justify;
+            font-family: Arimo;
             }
 
        .post:hover > .post_descr{visibility:visible;opacity:0.8}
@@ -1218,19 +1267,21 @@
         
         .prenext{height:380px;width:70px;display:flex; justify-content: center; align-items: center; align-content: center; z-index:1;position:absolute;top:320px;font-weight: 800; color:var(--morado); font-size: 40px;text-shadow: 2px 2px solid black;transition: all 1s;;}
 
-        .minitxt{ 
+        a .minitxt{ 
         	background-color: white;
         	white-space: wrap;
             overflow: hidden;
             text-overflow: ellipsis;
             margin-bottom:12px;
+            color:#111;
         }
+
         .miniimg{ background-color: transparent; color:white;}
         .miniimg{display: none}
-        .post:hover > .minitxt {background-color: transparent; font-size: 105%; text-shadow:1px 1px white; text-align: center} 
-        .post:hover > .minitxt p {display:none;}     
-        .post:hover > .miniimg {background-color: var(--morado); opacity: 0.9 ;text-shadow:1px 1px black; text-align: center} 
-        .post:hover > .miniimg {display:flex;}     
+        .post:hover > a .minitxt {background-color: transparent; font-size: 105%; text-shadow:1px 1px white; text-align: center} 
+        .post:hover > a .minitxt p {display:none;}     
+        .post:hover > a .miniimg {background-color: var(--morado); opacity: 0.9 ;text-shadow:1px 1px black; text-align: center} 
+        .post:hover > a .miniimg {display:flex;}     
     </style>
       <!--------------------------------------------Navbar Animation Script------------------------------------------------>
     <script>
@@ -1716,7 +1767,7 @@
               "dos  tres " 
               "cuatro cuatro"
             }
-          
+          .but15{width:80px;padding:5% 15%; font-size: 10px;}
              
           
           .item16{font-size:10px;}
@@ -1813,7 +1864,7 @@
                     <b>{props.title}</b>
                     <img src= {props.src} />
                     <Partes txt={props.e}/>
-                    <button className="but15_info"> + info </button>
+                    <button className="but15_info"><i className="fa fa-external-link"></i> Ver </button>
                   </div>)
         };
 
